@@ -11,14 +11,12 @@ class _CalciState extends State<Calci> {
   String equation = "0";
   String result = "0";
   String expression = "";
-  Color yellow = const Color(0xfff4b41A);
+  Color yellow = Color.fromARGB(255, 59, 255, 222);
   Color orange = const Color(0xfff143d59);
-  Color blue = const Color(0xfff49f1c);
+  Color blue = Colors.indigoAccent;
 
   calcbutn(String btntxt) {
-    setState(() {
-     
-    });
+    setState(() {});
   }
 
   Widget calcibutn(String btntxt, double btnhtg, Color btnclr) {
@@ -45,7 +43,7 @@ class _CalciState extends State<Calci> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('AyuCalc'),
         backgroundColor: Colors.black,
@@ -57,14 +55,14 @@ class _CalciState extends State<Calci> {
               padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
               child: Text(
                 equation,
-                style: const TextStyle(fontSize: 35, color: Colors.black),
+                style: const TextStyle(fontSize: 35, color: Colors.white),
               )),
           Container(
               alignment: Alignment.centerRight,
               padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
               child: Text(
                 result,
-                style: const TextStyle(fontSize: 35, color: Colors.black),
+                style: const TextStyle(fontSize: 35, color: Colors.white),
               )),
           const Expanded(
             child: Divider(
@@ -121,7 +119,7 @@ class _CalciState extends State<Calci> {
                       calcibutn("+", 1, yellow),
                     ]),
                     TableRow(children: [
-                      calcibutn("=", 2, yellow),
+                      calcibutn("=", 2, blue),
                     ])
                   ],
                 ),
